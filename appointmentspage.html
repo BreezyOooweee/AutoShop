@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Book An Appointment With Our Quick Fix Pit Crew</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Content on the importance of servicing and repairing your vehicle. A form to set up appointments between the customer and merchant.">
+		<meta name="robot" content="index, follow">
+		<link rel="stylesheet" href="stylesheet.css">
+
+		<style>
+			.bodypara {
+				border: 2px solid black;
+				background-color: #000099;
+			}
+
+			h4 {
+				color: #000;
+			}
+		</style>
+	</head>
+
+	<body>
+		<a href="index.html"><img src="images/logo.png" alt="Bryan's auto body shop logo" class="logo"></a>
+
+		<header id="pageheader">
+			<h1><a href="index.html">Bryan's Auto Body Shop</a></h1>
+			<nav id="topmenu">
+				<ul>
+					<li><a href="index.html">Home Page</a></li>
+					<li><a href="aboutpage.html">About Page</a></li>
+					<li><a href="contactpage.html">Contact</a></li>
+					<li><a href="servicespage.html">Auto Service</a></li>
+					<li><a class="active" href="#" id="current-page" role="button">Appointments</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="bodypara">
+			<div id="book_an_appointment">
+				<h2>Book an Appointment</h2>
+				<h3>Schedule an appointment with our Quick Fix pit crew! It's easy and simple! Just fill out the form below!</h3>
+				<p>Don't ignore the sounds coming from your vehicle! Your car is trying to tell you something is wrong! Ignoring the problem can lead to severe damage possibly totaling your vehicle or even worse like a fatal accident involving you and others who are riding passenger and share the road! </p>
+				<p>Loud music is not a solution! We know you paid good money for that sound system. Subwoofers in the trunk are so loud your car seats could perform shiatsu to your body as you sit. We truly understand quality sound.</p>
+				<p>If you do not have any subs or quality speakers, you can check our <a href="servicespage.html">Auto Service</a> page and browse our collection! They are great for album drops and playing your mixtape to people who did not ask to hear it! But it should never be used to drown out your car’s cries for help! Get it checked out! There’s no hassle with us!</p>
+				<p> The service and repair process are fast and simple, you'll be back in your car in no time! Just correctly file your information in the form below, and you will be able to bring your car in as soon as tomorrow! Don't worry, we do not ask for sensitive information online. Just enough information to make an appointment and the information you insert is still secure, protected, and encrypted!</p>
+			</div>
+
+			<div id="border_for_leather">
+				<img src="images/leather_seats.jpg" id="leather" alt="Gold leather seats">
+			</div>
+
+			<form id="appointmentform" name="appointmentform" action="#" onsubmit="return validateForm()" method="post">
+				<div id="leftside">
+					<label for="fname">First Name*:</label>
+					<input type="text" id="fname" class="insertbox" name="fname">
+
+					<label for="lname">Last Name*:</label>
+					<input type="text" id="lname" class="insertbox" name="lname" value="">
+
+					<label for="address">Address*:</label>
+					<input type="text" id="address" class="insertbox" name="address" value="" required>
+
+					<label for="email">Email Address*:</label>
+					<input type="email" id="email" class="insertbox" name="email" minlength="5" value="">
+
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" class="insertbox" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" required>
+
+					<label for="vehicle">Type of vehicle:</label>
+					<select id="vehicle" name="vehicle" required>
+						<option value="">Auto</option>
+						<option value="">Semi Truck</option>
+						<option value="">Moped/Scooter</option>
+					</select>
+
+					<label for="year">Year:</label>
+					<input type="number" id="year" class="insertbox" name="year" min="1998" max="2025" step="1">
+
+					<label for="make">Make:</label>
+					<input type="text" id="make" class="insertbox" name="make" maxlength="25">
+
+					<label for="model">Model:</label>
+					<input type="text" id="model" class="insertbox" name="model" minlength="1">
+
+					<h4>Engine:</h4>
+					<label><input type="radio" id="4cyl" name="enginename" value=" ">4 cylinder</label>
+					<label><input type="radio" id="6cyl" name="enginename" value=" ">6 cylinder</label>
+
+					<label for="mileage">How many miles is on your vehicle?:</label>
+					<input type="number" id="mileage" min="1" step="1">
+
+					<label for="color">Vehicle color:</label>
+					<select id="color" name="color">
+						<option>Choose color</option>
+						<option>Red</option>
+						<option>Blue</option>
+						<option>Green</option>
+						<option>Purple</option>
+						<option>Grey</option>
+						<option>Silver</option>
+						<option>Black</option>
+						<option>White</option>
+						<option>Brown</option>
+						<option>Tan</option>
+						<option>Yellow</option>
+						<option>Orange</option>
+					</select>
+
+				</div>
+
+				<div id="rightside">
+					<label for="commentbox">Describe the issue: </label>
+					<textarea id="commentbox" name="commentbox" rows="7" cols="40"></textarea>
+
+					<br>
+
+					<label for="damage">How severe is the damage?:</label>
+					<label>Minor <input type="range" id="damage" name="damage" min="1" max="10" value="5"> Totaled</label>
+
+					<fieldset>
+						<legend>Is the damage structural?</legend>
+						<label><input type="radio" name="nonstructural">Non Structural</label>
+						<label><input type="radio" name="structural">Structural</label>
+					</fieldset>
+
+					<br>
+					<br>
+
+					<label for="date">Schedual a date to bring in your vehicle</label>
+					<input type="date" id="date" required>
+
+					<label for="time">Schedual a time to bring in your vehicle</label>
+					<input type="time" id="time" required>
+
+					<br>
+					<br>
+
+					<label><input type="checkbox" name="contact" value="email">Check to be contacted by email</label>
+					<label><input type="checkbox" name="contact" value="text">Check to be contacted by cellphone (Text)</label>
+					<label><input type="checkbox" name="contact" value="call">Check to be contacted by cellphone (Call)</label>
+					<label><input type="checkbox" name="contact" value="pidgeon" checked>Check to be contacted by airmail (Pidgeon)</label>
+
+					<br>
+					<br>
+
+					<input type="submit" class="submit" value="Submit">
+					<input type="reset" value="Clear Form">
+				</div>
+			</form>
+		</main>
+		<footer>
+			<nav id="bottommenu" aria-label="The bottom navagation menu">
+				<p>
+					<a href="index.html">Home Page</a> |
+					<a href="aboutpage.html">About Page</a> |
+					<a href="contactpage.html">Contact</a> |
+					<a href="servicespage.html">Auto Service</a> |
+					<a class="active" href="#" id="bottomcurrentpage" role="button">Appointments</a> 
+				</p>
+			</nav>
+			<address>
+				Creator: Bryan Stringfield |
+				Updated: 07/27/2024 |
+				Contact: disputationi44@gmail.com <br><br>
+				Social Media: Instagram <a href="#" role="button">@Bryan's Repair Shop</a>; Twitter <a href="#" role="button">@Bryan's Repair Shop</a>; Facebook <a href="#" role="button">@Bryan's Repair Shop</a>;
+			</address>
+		</footer>
+		<script>
+			function validateForm() {
+				var address = document.getElementById("address").value;
+				var email = document.getElementById("email").value;
+				var lname = document.getElementById("lname").value;
+				var vehicle = document.getElementById("vehicle").value;
+				var fname = document.getElementById("fname").value;
+				const verify = [fname, lname, address, email];
+				let i= 0;
+
+				while (i < verify.length) {
+					if (verify[i] == "") {
+						alert("Please fill out all fields!");
+						return false;
+					}
+					i++;
+				}
+
+				if (vehicle !== "auto") {
+					alert("We only work with automobiles!");
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>
